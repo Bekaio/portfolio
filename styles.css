@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #e4f2f0;
+    padding: 30px;
+}
+
+.head {
+    display: flex;
+}
+
+.portfolio {
+    position: relative;
+    margin-top: 13px;
+    margin-left: 50px;
+}
+
+h1 {
+    font-family: "parisienne";
+}
+
+h4 {
+    font-family: "Quicksand";
+    font-weight: 400;
+}
+
+.gallery {
+    background-color: #ecf4f3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery .imag {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 5px;
+}
+
+.gallery .imag img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.gallery .imag img:hover {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+}
